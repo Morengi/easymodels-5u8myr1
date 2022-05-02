@@ -1,7 +1,34 @@
 <table class="canva" width="100%">
   <tr>
     <td rowspan="2" class="container">
-      <h3 class="title_block">Партнеры</h3>
+      <!-- ОТСЮДА НАЧАТЬ УДАЛЯТЬ -->
+    <nav class="menu">
+    <ul class="title1">
+    <h3 class="title_block">Партнеры</h3>
+  </ul>
+<ul class="menu_list">
+  <li>
+    <a class="menu_link">···</a>
+    <ul class="sub-menu_list">
+      <li>
+        <a  class="sub-menu_link" (click)="addCard(0)">Добавить карточку</a></li>
+      <li><a class="sub-menu_link" (click)="deleteBlock(0)">Очистить блок</a></li>
+      <li><a class="sub-menu_link">Вернуть в исходный вид</a>
+      <li><a class="sub-menu_link">Проследить изменения</a>
+      <ul class="sub-sub-menu_list">
+        <li><a  class="sub-sub-menu_link">Выбрать начальный период для сравнения изменений</a></li>
+        <li><a  class="sub-sub-menu_link">Выбрать конечный период для сравнения изменений</a></li>
+        <li><a class="sub-sub-menu_link">Выполнить</a>
+
+      </ul>
+      </li>
+    </ul>
+  </li>
+  
+</ul>
+</nav>
+<!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
+      <!-- <h3 class="title_block">Партнеры</h3> -->
       <div
         class="card_block"
         dragula="segments"
@@ -35,7 +62,34 @@
       <div class="add_card" (click)="addCard(0)">Добавить карточку</div>
     </td>
     <td class="container">
-      <h3 class="title_block">Виды деятельности</h3>
+    
+      <nav class="menu">
+    <ul class="title1">
+    <h3 class="title_block">Виды деятельности</h3>
+  </ul>
+<ul class="menu_list">
+  <li>
+    <a class="menu_link">···</a>
+    <ul class="sub-menu_list">
+      <li>
+        <a  class="sub-menu_link" (click)="addCard(1)">Добавить карточку</a></li>
+      <li><a class="sub-menu_link" (click)="deleteBlock(1)">Очистить блок</a></li>
+      <li><a class="sub-menu_link">Вернуть в исходный вид</a>
+      <li><a class="sub-menu_link">Проследить изменения</a>
+      <ul class="sub-sub-menu_list">
+        <li><a  class="sub-sub-menu_link">Выбрать начальный период для сравнения изменений</a></li>
+        <li><a  class="sub-sub-menu_link">Выбрать конечный период для сравнения изменений</a></li>
+        <li><a class="sub-sub-menu_link">Выполнить</a>
+
+      </ul>
+      </li>
+    </ul>
+  </li>
+  
+</ul>
+</nav>
+<!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
+      <!-- <h3 class="title_block">Виды деятельности</h3> -->
       <div
         class="card_block"
         dragula="segments"

@@ -139,6 +139,45 @@ export class BoardComponent implements OnInit {
         break;
     }
   }
+
+  deleteBlock(type){
+    switch(type){
+      case 0:
+        this.cards_of_key_partners.splice(0, this.cards_of_key_partners.length);
+      break;
+      case 1:
+        this.cards_of_key_actions.splice(0, this.cards_of_key_actions.length);
+        break;
+      case 2:
+        this.cards_of_key_resources.splice(0, this.cards_of_key_resources.length);
+        break;
+      case 3:
+        this.cards_of_value_proposition.splice(0, this.cards_of_value_proposition.length);
+        break;
+      case 4:
+        this.cards_of_customer_relationships.splice(0, this.cards_of_customer_relationships.length);
+        break;
+      case 5:
+        this.cards_of_channels.splice(0, this.cards_of_channels.length);
+        break;
+      case 6:
+        this.cards_of_customer_segments.splice(0, this.cards_of_customer_segments.length);
+        break;
+      case 7:
+        this.cards_of_cost_structure.splice(0, this.cards_of_cost_structure.length);
+        break;
+      case 8:
+        this.cards_of_income_streams.splice(0, this.cards_of_income_streams.length);
+        break;
+      default:
+        console.log(type);
+        break;
+    }
+      
+
+
+  }
+
   deleteCard(index, type) {
     switch (type) {
       case 0:
