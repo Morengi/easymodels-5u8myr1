@@ -23,7 +23,32 @@ export class BoardComponent implements OnInit {
   cards_of_income_streams: card[] = [];
 
   boards: any = [];
+
+  saveBoard() {
+    this.boards.push({
+      values:[this.cards_of_key_actions,
+        this.cards_of_key_resources,
+        this.cards_of_value_proposition,
+        this.cards_of_customer_relationships,
+        this.cards_of_channels,
+        this.cards_of_customer_segments,
+        this.cards_of_cost_structure,
+        this.cards_of_income_streams],
+        date:Date.now()
+        
+      }
   
+    );
+    console.log(this.boards.length);
+  }
+
+  compareBoard(date1, date2){
+
+    
+    
+
+  }
+
 
   constructor(private dragulaService: DragulaService) {
     // use these if you want
@@ -152,7 +177,6 @@ export class BoardComponent implements OnInit {
   // focusMethod = function(){
   //   document.getElementById('add_card').focus();
   // }
-
 
   addCard(type) {
     switch (type) {
