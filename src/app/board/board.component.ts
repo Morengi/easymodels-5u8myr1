@@ -22,6 +22,9 @@ export class BoardComponent implements OnInit {
   cards_of_cost_structure: card[] = [];
   cards_of_income_streams: card[] = [];
 
+  boards: any = [];
+  
+
   constructor(private dragulaService: DragulaService) {
     // use these if you want
 
