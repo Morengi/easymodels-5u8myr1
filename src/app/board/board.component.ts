@@ -26,29 +26,22 @@ export class BoardComponent implements OnInit {
 
   saveBoard() {
     this.boards.push({
-      values:[this.cards_of_key_actions,
+      values: [
+        this.cards_of_key_actions,
         this.cards_of_key_resources,
         this.cards_of_value_proposition,
         this.cards_of_customer_relationships,
         this.cards_of_channels,
         this.cards_of_customer_segments,
         this.cards_of_cost_structure,
-        this.cards_of_income_streams],
-        date:Date.now()
-        
-      }
-  
-    );
+        this.cards_of_income_streams,
+      ],
+      date: Date.now(),
+    });
     console.log(this.boards.length);
   }
 
-  compareBoard(date1, date2){
-
-    
-    
-
-  }
-
+  compareBoard(date1, date2) {}
 
   constructor(private dragulaService: DragulaService) {
     // use these if you want
@@ -140,45 +133,62 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  deleteBlock(type){
-    switch(type){
+  deleteBlock(type) {
+    //Удаление карточек из блока
+    switch (type) {
       case 0:
         this.cards_of_key_partners.splice(0, this.cards_of_key_partners.length);
-      break;
+        break;
       case 1:
         this.cards_of_key_actions.splice(0, this.cards_of_key_actions.length);
         break;
       case 2:
-        this.cards_of_key_resources.splice(0, this.cards_of_key_resources.length);
+        this.cards_of_key_resources.splice(
+          0,
+          this.cards_of_key_resources.length
+        );
         break;
       case 3:
-        this.cards_of_value_proposition.splice(0, this.cards_of_value_proposition.length);
+        this.cards_of_value_proposition.splice(
+          0,
+          this.cards_of_value_proposition.length
+        );
         break;
       case 4:
-        this.cards_of_customer_relationships.splice(0, this.cards_of_customer_relationships.length);
+        this.cards_of_customer_relationships.splice(
+          0,
+          this.cards_of_customer_relationships.length
+        );
         break;
       case 5:
         this.cards_of_channels.splice(0, this.cards_of_channels.length);
         break;
       case 6:
-        this.cards_of_customer_segments.splice(0, this.cards_of_customer_segments.length);
+        this.cards_of_customer_segments.splice(
+          0,
+          this.cards_of_customer_segments.length
+        );
         break;
       case 7:
-        this.cards_of_cost_structure.splice(0, this.cards_of_cost_structure.length);
+        this.cards_of_cost_structure.splice(
+          0,
+          this.cards_of_cost_structure.length
+        );
         break;
       case 8:
-        this.cards_of_income_streams.splice(0, this.cards_of_income_streams.length);
+        this.cards_of_income_streams.splice(
+          0,
+          this.cards_of_income_streams.length
+        );
         break;
       default:
         console.log(type);
         break;
     }
-      
-
-
   }
 
   deleteCard(index, type) {
+    //Удаление одной карточки
     switch (type) {
       case 0:
         this.cards_of_key_partners.splice(index, 1);
