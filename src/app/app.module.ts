@@ -9,6 +9,7 @@ import {AutosizeModule} from 'ngx-autosize';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { BoardComponent } from './board/board.component';
+import { TimeLineComponent } from './timeline/timeline.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { BoardComponent } from './board/board.component';
     PinchZoomModule,
     AutosizeModule
   ],
-  declarations: [AppComponent, HelloComponent, BoardComponent],
+  declarations: [AppComponent, HelloComponent, BoardComponent, TimeLineComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
