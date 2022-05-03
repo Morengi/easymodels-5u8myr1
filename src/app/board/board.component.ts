@@ -41,7 +41,34 @@ export class BoardComponent implements OnInit {
     console.log(this.boards.length);
   }
 
-  compareBoard(date1, date2) {}
+  returnLastBoard(){
+   let lastBoard = this.boards[this.boards.lenght]
+    console.log(lastBoard.cards_of_key_partners.name);
+  }
+
+
+  compareBoard(date1, date2) {
+    
+    if(date1>date2){
+      for(let i of this.boards.lenght){
+        
+
+
+      }
+
+    }
+    else{
+      for(let i of this.boards.lenght){
+
+
+
+      }
+    }
+
+    
+
+
+  }
 
   constructor(private dragulaService: DragulaService) {
     // use these if you want
