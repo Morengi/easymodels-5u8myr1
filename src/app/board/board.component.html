@@ -31,6 +31,32 @@
 </nav>
 <!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
       <!-- <h3 class="title_block">Партнеры</h3> -->
+      <script>
+      angular.element('#asdfgh').focus();
+
+
+        var app = angular.module('asdfgh', []);
+
+        app.controller('MainCtrl', function($scope) {
+          $scope.name = 'World';
+        });
+
+        app.directive('autoFocus', function() {
+          return {
+            link: {
+              pre: function(scope, element, attr) {
+                console.log('prelink executed for');
+              },
+              post: function(scope, element, attr) {
+                console.log('postlink executed');
+                element[0].focus();
+              }
+            }
+          }
+        });
+      </script>
+
+
       <div
         class="card_block"
         dragula="segments"
@@ -47,6 +73,8 @@
               [minRows]="1"
               [(ngModel)]="el.text"
               (keydown.control.enter)="onCtrlEnter(i, 0)"
+              ng-app="asdfgh"
+              auto-focus
             ></textarea>
             <article class="btn_ok" (click)="onCtrlEnter(i, 0)">
               Сохранить изменения
