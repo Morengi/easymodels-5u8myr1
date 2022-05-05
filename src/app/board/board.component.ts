@@ -42,8 +42,12 @@ export class BoardComponent implements OnInit {
   }
 
   returnLastCard(el) {
-    let lastCards = el[el.lenght-1];
+    return el[el.lenght-1];
     // console.log(lastBoard);
+  }
+
+  returnLastBoard(board){
+    return board[board.lenght-1];
   }
 
   compareBoard(date1, date2) {
