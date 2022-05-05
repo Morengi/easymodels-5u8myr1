@@ -7,22 +7,22 @@
       <a class="main_menu_link">···</a>
       <ul class="main_sub-menu_list">
         <li>
-          <a class="main_sub-menu_link" (click)="addCard(0)"
-            >Добавить карточку</a
+          <a class="main_sub-menu_link" 
+            >Создать новую доску</a
           >
         </li>
         <li>
-          <a class="main_sub-menu_link" (click)="deleteBlock(0)"
-            >Очистить блок</a
+          <a class="main_sub-menu_link"
+            >Создать новое состояние доски</a
           >
         </li>
         <li>
-          <a class="main_sub-menu_link" (click)="returnLastCard(cards_of_key_partners)"
+          <a class="main_sub-menu_link"
             >Вернуть в исходный вид</a
           >
         </li>
         <li>
-          <a class="main_sub-menu_link">Проследить изменения</a>
+          <a class="main_sub-menu_link">Сравнить состояние досок</a>
           <ul class="main_sub-sub-menu_list">
             <li>
               <a class="main_sub-sub-menu_link_disabled"
@@ -53,8 +53,10 @@
       <ul class="title1"></ul>
       <ul class="menu_list">
         <li>
-          <a class="menu_link">···</a>
-          <ul class="sub-menu_list">
+          <a class="menu_link" 
+          
+          >···</a>
+          <ul class="" [ngClass]="{active_menu: this.test}">
             <li>
               <a class="sub-menu_link" (click)="addCard(0)"
                 >Добавить карточку</a

@@ -11,6 +11,8 @@ import { findIndex } from 'rxjs/operators';
 export class BoardComponent implements OnInit {
   user_name: string = 'user';
 
+  test: boolean = true;
+
   cards_of_key_partners: card[] = [];
 
   cards_of_key_actions: card[] = [];
