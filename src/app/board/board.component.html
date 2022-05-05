@@ -20,7 +20,7 @@
               >
             </li>
             <li>
-              <a class="sub-menu_link" (click)="returnLastBoard()"
+              <a class="sub-menu_link" (click)="returnLastCard(cards_of_key_partners)"
                 >Вернуть в исходный вид</a
               >
             </li>
@@ -55,20 +55,7 @@
       dragula="segments"
       [(dragulaModel)]="cards_of_key_partners"
     >
-      <!-- <div class="add_card" (click)="addCard(0)" 
-      >Добавить карточку</div> -->
-      <!--  -->
-      <!-- <div
-        class="add_card"
-        (click)="
-          focusMethod(
-            cards_of_key_partners[cards_of_key_partners.length - 1].date
-          )
-        "
-      >
-        Focue ebat
-      </div> -->
-      <!--  -->
+      
       <div
         class="card"
         *ngFor="let el of cards_of_key_partners; let i = index"

@@ -41,8 +41,8 @@ export class BoardComponent implements OnInit {
     console.log(this.boards.length);
   }
 
-  returnLastBoard() {
-    let lastBoard = this.boards[this.boards.lenght];
+  returnLastCard(el) {
+    let lastCards = el[el.lenght-1];
     // console.log(lastBoard);
   }
 
@@ -279,18 +279,11 @@ export class BoardComponent implements OnInit {
   }
 
   focusMethod = async function getFocus(id) {
-    // console.log(id);
-    // while(document.getElementById(id) == null){
-
-    // }
+  
     document.getElementById(id)?.focus();
   };
 
-  // focusChecked(foc){
-
-  //   foc.focus();
-
-  // }
+  
 
   addCard(type) {
     switch (type) {
@@ -301,10 +294,7 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        // this.getFocus(this.cards_of_key_partners[this.cards_of_key_partners.length - 1].date);
-        // let p = this.focusMethod(
-        //   this.cards_of_key_partners[this.cards_of_key_partners.length - 1].date
-        // );
+        
         setTimeout(()=>{
         this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date);
         },100)
