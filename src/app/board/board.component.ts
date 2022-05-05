@@ -261,15 +261,21 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  // focusMethod = function getFocus(){
-  //   document.getElementById("foc1").focus();
+
+  focusMethod = async function getFocus(id) {
+    // console.log(id);
+    // while(document.getElementById(id) == null){
+
+    // }
+    document.getElementById(id)?.focus();
+  };
+      
+  //  focusChecked(foc){
+    
+  
   // }
 
-  // focusChecked(foc){
-  
-  //   foc.focus();
-  
-  // }
+
 
 
   addCard(type) {
@@ -281,6 +287,7 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+       this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date)
         break;
       case 1:
         this.cards_of_key_actions.push({
@@ -353,9 +360,12 @@ export class BoardComponent implements OnInit {
     }
   }
 }
+
 type card = {
   name: string;
   text: string;
   date: number;
   show_text: boolean;
 };
+
+
