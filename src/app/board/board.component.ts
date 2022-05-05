@@ -41,45 +41,35 @@ export class BoardComponent implements OnInit {
     console.log(this.boards.length);
   }
 
-  returnLastBoard(){
-   let lastBoard = this.boards[this.boards.lenght]
+  returnLastBoard() {
+    let lastBoard = this.boards[this.boards.lenght];
     // console.log(lastBoard);
-
   }
-
 
   compareBoard(date1, date2) {
-    
     let firstComparedBoard: any = []; // Доска с раней датой
-    let secondComparedBoard: any = [];  // Доска с поздней датой
+    let secondComparedBoard: any = []; // Доска с поздней датой
 
-
-    if(date1>date2){
-      for(let i of this.boards.lenght){
-        if(date2 = this.boards[i].date){
+    if (date1 > date2) {
+      for (let i of this.boards.lenght) {
+        if ((date2 = this.boards[i].date)) {
           firstComparedBoard[i] = this.boards[i];
         }
-        if(date1= this.boards[i].date){
+        if ((date1 = this.boards[i].date)) {
+          secondComparedBoard[i] = this.boards[i];
+        }
+      }
+    } else {
+      for (let i of this.boards.lenght) {
+        if ((date1 = this.boards[i].date)) {
+          firstComparedBoard[i] = this.boards[i];
+        }
+        if ((date2 = this.boards[i].date)) {
           secondComparedBoard[i] = this.boards[i];
         }
       }
     }
-    else{
-      for(let i of this.boards.lenght){
-        if(date1 = this.boards[i].date){
-          firstComparedBoard[i] = this.boards[i];
-        }
-        if(date2=this.boards[i].date){
-          secondComparedBoard[i] = this.boards[i];
-        }
-      }
-    }
-
   }
-
-
-  
-
 
   constructor(private dragulaService: DragulaService) {
     // use these if you want
@@ -261,7 +251,6 @@ export class BoardComponent implements OnInit {
     }
   }
 
-
   focusMethod = async function getFocus(id) {
     // console.log(id);
     // while(document.getElementById(id) == null){
@@ -269,14 +258,12 @@ export class BoardComponent implements OnInit {
     // }
     document.getElementById(id)?.focus();
   };
-      
-  //  focusChecked(foc){
-    
-  
+
+  // focusChecked(foc){
+
+  //   foc.focus();
+
   // }
-
-
-
 
   addCard(type) {
     switch (type) {
@@ -287,7 +274,14 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-       this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date)
+        // this.getFocus(this.cards_of_key_partners[this.cards_of_key_partners.length - 1].date);
+        // let p = this.focusMethod(
+        //   this.cards_of_key_partners[this.cards_of_key_partners.length - 1].date
+        // );
+        setTimeout(()=>{
+        this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date);
+        },100)
+
         break;
       case 1:
         this.cards_of_key_actions.push({
@@ -296,6 +290,9 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_key_actions[this.cards_of_key_actions.length-1].date);
+          },100)
         break;
       case 2:
         this.cards_of_key_resources.push({
@@ -304,7 +301,11 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_key_resources[this.cards_of_key_resources.length-1].date);
+          },100);
         break;
+
       case 3:
         this.cards_of_value_proposition.push({
           name: this.user_name,
@@ -312,7 +313,11 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_value_proposition[this.cards_of_value_proposition.length-1].date);
+          },100);
         break;
+
       case 4:
         this.cards_of_customer_relationships.push({
           name: this.user_name,
@@ -320,6 +325,10 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_customer_relationships[this.cards_of_customer_relationships.length-1].date);
+          },100);
+
         break;
       case 5:
         this.cards_of_channels.push({
@@ -328,6 +337,9 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_channels[this.cards_of_channels.length-1].date);
+          },100);
         break;
       case 6:
         this.cards_of_customer_segments.push({
@@ -336,6 +348,9 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_customer_segments[this.cards_of_customer_segments.length-1].date);
+          },100);
         break;
       case 7:
         this.cards_of_cost_structure.push({
@@ -344,6 +359,9 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_cost_structure[this.cards_of_cost_structure.length-1].date);
+          },100);
         break;
       case 8:
         this.cards_of_income_streams.push({
@@ -352,7 +370,11 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_income_streams[this.cards_of_income_streams.length-1].date);
+          },100);
         break;
+        
 
       default:
         console.log(type);
@@ -360,12 +382,9 @@ export class BoardComponent implements OnInit {
     }
   }
 }
-
 type card = {
   name: string;
   text: string;
   date: number;
   show_text: boolean;
 };
-
-
