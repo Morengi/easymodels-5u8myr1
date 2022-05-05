@@ -87,30 +87,57 @@ export class BoardComponent implements OnInit {
     switch (id_block) {
       case 0:
         this.cards_of_key_partners[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date);
+          },100)
         break;
       case 1:
         this.cards_of_key_actions[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_key_actions[this.cards_of_key_actions.length-1].date);
+          },100)
         break;
       case 2:
         this.cards_of_key_resources[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_key_resources[this.cards_of_key_resources.length-1].date);
+          },100);
         break;
       case 3:
         this.cards_of_value_proposition[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_value_proposition[this.cards_of_value_proposition.length-1].date);
+          },100);
         break;
       case 4:
         this.cards_of_customer_relationships[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_customer_relationships[this.cards_of_customer_relationships.length-1].date);
+          },100);
         break;
       case 5:
         this.cards_of_channels[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_channels[this.cards_of_channels.length-1].date);
+          },100);
         break;
       case 6:
         this.cards_of_customer_segments[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_customer_segments[this.cards_of_customer_segments.length-1].date);
+          },100);
         break;
       case 7:
         this.cards_of_cost_structure[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_cost_structure[this.cards_of_cost_structure.length-1].date);
+          },100);
         break;
       case 8:
         this.cards_of_income_streams[index].show_text = false;
+        setTimeout(()=>{
+          this.focusMethod(this.cards_of_income_streams[this.cards_of_income_streams.length-1].date);
+          },100);
         break;
       default:
         console.log(index, id_block);
