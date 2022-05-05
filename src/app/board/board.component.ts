@@ -12,7 +12,6 @@ export class BoardComponent implements OnInit {
   user_name: string = 'user';
 
   test: boolean = true;
-
   cards_of_key_partners: card[] = [];
 
   cards_of_key_actions: card[] = [];
@@ -25,6 +24,9 @@ export class BoardComponent implements OnInit {
   cards_of_income_streams: card[] = [];
 
   boards: any = [];
+  testingASS() {
+    this.test = !this.test;
+  }
 
   saveBoard() {
     this.boards.push({
@@ -44,12 +46,12 @@ export class BoardComponent implements OnInit {
   }
 
   returnLastCard(el) {
-    return el[el.lenght-1];
+    return el[el.lenght - 1];
     // console.log(lastBoard);
   }
 
-  returnLastBoard(board){
-    return board[board.lenght-1];
+  returnLastBoard(board) {
+    return board[board.lenght - 1];
   }
 
   compareBoard(date1, date2) {
@@ -93,57 +95,87 @@ export class BoardComponent implements OnInit {
     switch (id_block) {
       case 0:
         this.cards_of_key_partners[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date);
-          },100)
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_partners[this.cards_of_key_partners.length - 1]
+              .date
+          );
+        }, 100);
         break;
       case 1:
         this.cards_of_key_actions[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_key_actions[this.cards_of_key_actions.length-1].date);
-          },100)
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_actions[this.cards_of_key_actions.length - 1].date
+          );
+        }, 100);
         break;
       case 2:
         this.cards_of_key_resources[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_key_resources[this.cards_of_key_resources.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_resources[this.cards_of_key_resources.length - 1]
+              .date
+          );
+        }, 100);
         break;
       case 3:
         this.cards_of_value_proposition[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_value_proposition[this.cards_of_value_proposition.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_value_proposition[
+              this.cards_of_value_proposition.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 4:
         this.cards_of_customer_relationships[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_customer_relationships[this.cards_of_customer_relationships.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_customer_relationships[
+              this.cards_of_customer_relationships.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 5:
         this.cards_of_channels[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_channels[this.cards_of_channels.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_channels[this.cards_of_channels.length - 1].date
+          );
+        }, 100);
         break;
       case 6:
         this.cards_of_customer_segments[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_customer_segments[this.cards_of_customer_segments.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_customer_segments[
+              this.cards_of_customer_segments.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 7:
         this.cards_of_cost_structure[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_cost_structure[this.cards_of_cost_structure.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_cost_structure[
+              this.cards_of_cost_structure.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 8:
         this.cards_of_income_streams[index].show_text = false;
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_income_streams[this.cards_of_income_streams.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_income_streams[
+              this.cards_of_income_streams.length - 1
+            ].date
+          );
+        }, 100);
         break;
       default:
         console.log(index, id_block);
@@ -198,49 +230,32 @@ export class BoardComponent implements OnInit {
     //Удаление карточек из блока
     switch (type) {
       case 0:
-        this.cards_of_key_partners.splice(0, this.cards_of_key_partners.length);
+        // this.cards_of_key_partners.splice(0, this.cards_of_key_partners.length);
+        this.cards_of_key_partners = [];
         break;
       case 1:
-        this.cards_of_key_actions.splice(0, this.cards_of_key_actions.length);
+        this.cards_of_key_actions = [];
         break;
       case 2:
-        this.cards_of_key_resources.splice(
-          0,
-          this.cards_of_key_resources.length
-        );
+        this.cards_of_key_resources = [];
         break;
       case 3:
-        this.cards_of_value_proposition.splice(
-          0,
-          this.cards_of_value_proposition.length
-        );
+        this.cards_of_value_proposition = [];
         break;
       case 4:
-        this.cards_of_customer_relationships.splice(
-          0,
-          this.cards_of_customer_relationships.length
-        );
+        this.cards_of_customer_relationships = [];
         break;
       case 5:
-        this.cards_of_channels.splice(0, this.cards_of_channels.length);
+        this.cards_of_channels = [];
         break;
       case 6:
-        this.cards_of_customer_segments.splice(
-          0,
-          this.cards_of_customer_segments.length
-        );
+        this.cards_of_customer_segments = [];
         break;
       case 7:
-        this.cards_of_cost_structure.splice(
-          0,
-          this.cards_of_cost_structure.length
-        );
+        this.cards_of_cost_structure = [];
         break;
       case 8:
-        this.cards_of_income_streams.splice(
-          0,
-          this.cards_of_income_streams.length
-        );
+        this.cards_of_income_streams = [];
         break;
       default:
         console.log(type);
@@ -285,7 +300,6 @@ export class BoardComponent implements OnInit {
   }
 
   focusMethod = async function getFocus(id) {
-  
     document.getElementById(id)?.focus();
   };
 
@@ -298,10 +312,13 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        
-        setTimeout(()=>{
-        this.focusMethod(this.cards_of_key_partners[this.cards_of_key_partners.length-1].date);
-        },100)
+
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_partners[this.cards_of_key_partners.length - 1]
+              .date
+          );
+        }, 100);
 
         break;
       case 1:
@@ -311,9 +328,11 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_key_actions[this.cards_of_key_actions.length-1].date);
-          },100)
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_actions[this.cards_of_key_actions.length - 1].date
+          );
+        }, 100);
         break;
       case 2:
         this.cards_of_key_resources.push({
@@ -322,9 +341,12 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_key_resources[this.cards_of_key_resources.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_key_resources[this.cards_of_key_resources.length - 1]
+              .date
+          );
+        }, 100);
         break;
 
       case 3:
@@ -334,9 +356,13 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_value_proposition[this.cards_of_value_proposition.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_value_proposition[
+              this.cards_of_value_proposition.length - 1
+            ].date
+          );
+        }, 100);
         break;
 
       case 4:
@@ -346,9 +372,13 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_customer_relationships[this.cards_of_customer_relationships.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_customer_relationships[
+              this.cards_of_customer_relationships.length - 1
+            ].date
+          );
+        }, 100);
 
         break;
       case 5:
@@ -358,9 +388,11 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_channels[this.cards_of_channels.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_channels[this.cards_of_channels.length - 1].date
+          );
+        }, 100);
         break;
       case 6:
         this.cards_of_customer_segments.push({
@@ -369,9 +401,13 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_customer_segments[this.cards_of_customer_segments.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_customer_segments[
+              this.cards_of_customer_segments.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 7:
         this.cards_of_cost_structure.push({
@@ -380,9 +416,13 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_cost_structure[this.cards_of_cost_structure.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_cost_structure[
+              this.cards_of_cost_structure.length - 1
+            ].date
+          );
+        }, 100);
         break;
       case 8:
         this.cards_of_income_streams.push({
@@ -391,11 +431,14 @@ export class BoardComponent implements OnInit {
           date: Date.now(),
           show_text: false,
         });
-        setTimeout(()=>{
-          this.focusMethod(this.cards_of_income_streams[this.cards_of_income_streams.length-1].date);
-          },100);
+        setTimeout(() => {
+          this.focusMethod(
+            this.cards_of_income_streams[
+              this.cards_of_income_streams.length - 1
+            ].date
+          );
+        }, 100);
         break;
-        
 
       default:
         console.log(type);

@@ -54,9 +54,9 @@
       <ul class="menu_list">
         <li>
           <a class="menu_link" 
-          
+          (click)="testingASS()"
           >···</a>
-          <ul class="" [ngClass]="{active_menu: this.test}">
+          <ul class="sub-menu_list" [ngClass]="{'active_menu': !this.test}">
             <li>
               <a class="sub-menu_link" (click)="addCard(0)"
                 >Добавить карточку</a
@@ -115,7 +115,7 @@
             [minRows]="1"
             [(ngModel)]="el.text"
             (keydown.control.enter)="onCtrlEnter(i, 0)"
-            ng-app="asdfgh"
+           
             [attr.id]="el.date"
           ></textarea>
           <article class="btn_ok" (click)="onCtrlEnter(i, 0)">
@@ -141,8 +141,10 @@
       <ul class="title1"></ul>
       <ul class="menu_list">
         <li>
-          <a class="menu_link">···</a>
-          <ul class="sub-menu_list">
+          <a class="menu_link"
+          
+          >···</a>
+          <ul class="sub-menu_list" [ngClass]="{'active_menu': !this.test}">
             <li>
               <a class="sub-menu_link" (click)="addCard(1)"
                 >Добавить карточку</a

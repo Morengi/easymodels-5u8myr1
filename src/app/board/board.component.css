@@ -299,6 +299,7 @@ h1 {
 
 .menu a {
   text-decoration: none;
+  
   /* width: max-content; */
   /* height: min-content; */
   /* text-align: left;
@@ -309,7 +310,7 @@ h1 {
 
 .main_menu a{
   text-decoration: none;
-
+  font-size: 14px;
 }
 
 .menu li {
@@ -338,7 +339,7 @@ h1 {
 
 /* .menu_list > li: .sub-menu_list { */
 .active_menu{  
-  display: block;
+  display: none;
 }
 
 .main_menu_link{
@@ -348,6 +349,8 @@ h1 {
 .menu_link {
   color: grey;
   margin: 0px 0px 0px 150px;
+
+  cursor: pointer;
   /* width: min-content;
   height: min-content; */
 }
@@ -371,7 +374,8 @@ h1 {
   position: relative;
   right: 0;
   top: 10px;
-  padding: 10px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+
 }
 
 .main_sub-menu_list > li{
@@ -381,13 +385,14 @@ h1 {
 .sub-menu_list > li {
   /* display: none; */
   background-color: rgb(209, 228, 254, 0.7);
+ 
 }
 
 .main_sub-menu_list > li:hover .main_sub-sub-menu_list {
   display: block;
 }
 
-.sub-menu_list > li:active .sub-sub-menu_list {
+.sub-menu_list > li:hover .sub-sub-menu_list {
   display: block;
 }
 .main_sub-menu_link{
@@ -400,9 +405,16 @@ h1 {
 .sub-menu_link {
   color: #111;
   display: inline-block;
-  padding: 5px 5px;
+  padding: 0;
+  margin: 5px;
   cursor: pointer;
 }
+
+.sub-menu_link:hover{
+  background-color:#b3bece ;
+  width: 100%;
+}
+
 .main_sub-sub-menu_list{
   display: none;
   position: absolute;
@@ -411,7 +423,7 @@ h1 {
   min-width: 100px;
   padding: 0px 0px 0px 5px;
   cursor: pointer;
-
+  z-index: 6;
 }
 .sub-sub-menu_list {
   display: none;
@@ -421,6 +433,7 @@ h1 {
   min-width: 100px;
   padding: 0px 0px 0px 5px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .main_sub-sub-menu_list > li{
