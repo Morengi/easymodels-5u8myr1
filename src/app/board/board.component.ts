@@ -261,9 +261,16 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  // focusMethod = function(){
-  //   document.getElementById('add_card').focus();
+  // focusMethod = function getFocus(){
+  //   document.getElementById("foc1").focus();
   // }
+
+  // focusChecked(foc){
+  
+  //   foc.focus();
+  
+  // }
+
 
   addCard(type) {
     switch (type) {

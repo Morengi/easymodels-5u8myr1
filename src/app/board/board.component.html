@@ -3,60 +3,53 @@
     <td rowspan="2" class="container">
       <!-- ОТСЮДА НАЧАТЬ УДАЛЯТЬ -->
       <h3 class="title_block">Партнеры</h3>
-    <nav class="menu">
-    <ul class="title1">
-  </ul>
-<ul class="menu_list">
-  <li>
-    <a class="menu_link">···</a>
-    <ul class="sub-menu_list">
-      <li>
-        <a  class="sub-menu_link" (click)="addCard(0)">Добавить карточку</a></li>
-      <li><a class="sub-menu_link" (click)="deleteBlock(0)">Очистить блок</a></li> 
-      <li><a class="sub-menu_link" (click)="returnLastBoard()">Вернуть в исходный вид</a>
-      <li><a class="sub-menu_link">Проследить изменения</a>
-      <ul class="sub-sub-menu_list">
-        <li><a  class="sub-sub-menu_link">Выбрать начальный период для сравнения изменений</a></li>
-        <li><input class placeholder="Введите дату"></li>
-        <li><a  class="sub-sub-menu_link">Выбрать конечный период для сравнения изменений</a></li>
-        <li><input placeholder="Введите дату"></li>
-        <li><a class="sub-sub-menu_link">Выполнить</a>
+      <nav class="menu">
+        <ul class="title1"></ul>
+        <ul class="menu_list">
+          <li>
+            <a class="menu_link">···</a>
+            <ul class="sub-menu_list">
+              <li>
+                <a class="sub-menu_link" (click)="addCard(0)"
+                  >Добавить карточку</a
+                >
+              </li>
+              <li>
+                <a class="sub-menu_link" (click)="deleteBlock(0)"
+                  >Очистить блок</a
+                >
+              </li>
+              <li>
+                <a class="sub-menu_link" (click)="returnLastBoard()"
+                  >Вернуть в исходный вид</a
+                >
+              </li>
+              <li>
+                <a class="sub-menu_link">Проследить изменения</a>
+                <ul class="sub-sub-menu_list">
+                  <li>
+                    <a class="sub-sub-menu_link"
+                      >Выбрать начальный период для сравнения изменений</a
+                    >
+                  </li>
+                  <li><input class placeholder="Введите дату" /></li>
+                  <li>
+                    <a class="sub-sub-menu_link"
+                      >Выбрать конечный период для сравнения изменений</a
+                    >
+                  </li>
+                  <li><input placeholder="Введите дату" /></li>
+                  <li><a class="sub-sub-menu_link">Выполнить</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div></div>
 
-      </ul>
-      </li>
-    </ul>
-  </li>
-  
-</ul>
-</nav>
-<!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
+      <!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
       <!-- <h3 class="title_block">Партнеры</h3> -->
-      <script>
-      angular.element('#asdfgh').focus();
-
-
-        var app = angular.module('asdfgh', []);
-
-        app.controller('MainCtrl', function($scope) {
-          $scope.name = 'World';
-        });
-
-        app.directive('autoFocus', function() {
-          return {
-            link: {
-              pre: function(scope, element, attr) {
-                console.log('prelink executed for');
-              },
-              post: function(scope, element, attr) {
-                console.log('postlink executed');
-                element[0].focus();
-              }
-            }
-          }
-        });
-      </script>
-
-
       <div
         class="card_block"
         dragula="segments"
@@ -74,7 +67,7 @@
               [(ngModel)]="el.text"
               (keydown.control.enter)="onCtrlEnter(i, 0)"
               ng-app="asdfgh"
-              auto-focus
+              #foc
             ></textarea>
             <article class="btn_ok" (click)="onCtrlEnter(i, 0)">
               Сохранить изменения
@@ -89,36 +82,50 @@
           </div>
         </div>
       </div>
-      <div class="add_card" (click)="addCard(0)">Добавить карточку</div>
+      <div class="add_card" (click)="addCard(0)" onClick="getFocus()">
+        Добавить карточку
+      </div>
     </td>
     <td class="container">
-    
-    <h3 class="title_block">Виды деятельности</h3>
-    <nav class="menu">
-      <ul class="title1">
-  </ul>
-<ul class="menu_list">
-  <li>
-    <a class="menu_link">···</a>
-    <ul class="sub-menu_list">
-      <li>
-        <a  class="sub-menu_link" (click)="addCard(1)">Добавить карточку</a></li>
-      <li><a class="sub-menu_link" (click)="deleteBlock(1)">Очистить блок</a></li>
-      <li><a class="sub-menu_link">Вернуть в исходный вид</a>
-      <li><a class="sub-menu_link">Проследить изменения</a>
-      <ul class="sub-sub-menu_list">
-        <li><a  class="sub-sub-menu_link">Выбрать начальный период для сравнения изменений</a></li>
-        <li><a  class="sub-sub-menu_link">Выбрать конечный период для сравнения изменений</a></li>
-        <li><a class="sub-sub-menu_link">Выполнить</a>
-
-      </ul>
-      </li>
-    </ul>
-  </li>
-  
-</ul>
-</nav>
-<!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
+      <h3 class="title_block">Виды деятельности</h3>
+      <nav class="menu">
+        <ul class="title1"></ul>
+        <ul class="menu_list">
+          <li>
+            <a class="menu_link">···</a>
+            <ul class="sub-menu_list">
+              <li>
+                <a class="sub-menu_link" (click)="addCard(1)"
+                  >Добавить карточку</a
+                >
+              </li>
+              <li>
+                <a class="sub-menu_link" (click)="deleteBlock(1)"
+                  >Очистить блок</a
+                >
+              </li>
+              <li><a class="sub-menu_link">Вернуть в исходный вид</a></li>
+              <li>
+                <a class="sub-menu_link">Проследить изменения</a>
+                <ul class="sub-sub-menu_list">
+                  <li>
+                    <a class="sub-sub-menu_link"
+                      >Выбрать начальный период для сравнения изменений</a
+                    >
+                  </li>
+                  <li>
+                    <a class="sub-sub-menu_link"
+                      >Выбрать конечный период для сравнения изменений</a
+                    >
+                  </li>
+                  <li><a class="sub-sub-menu_link">Выполнить</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ВСЕ ЧТО ДО СЮДА СВЕРХУ УДАЛИТЬ!!! -->
       <!-- <h3 class="title_block">Виды деятельности</h3> -->
       <div
         class="card_block"
@@ -398,5 +405,9 @@
 <div class="btn_ok" (click)="saveBoard()">Кнопочка</div>
 
 <div class="" *ngFor="let b of boards">
-  {{ b.date| date: 'dd.MM.yyyy HH:mm' }}
+  {{ b.date | date: 'dd.MM.yyyy HH:mm' }}
 </div>
+
+<!-- <script>
+document.getElementById("foc").focus();
+</script> -->
