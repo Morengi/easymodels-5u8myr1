@@ -287,8 +287,6 @@ export class BoardComponent implements OnInit {
     document.getElementById(id)?.focus();
   };
 
-  
-
   addCard(type) {
     switch (type) {
       case 0:

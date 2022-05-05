@@ -1,3 +1,49 @@
+<div class="header1">
+  <h1>Название Доски</h1>
+  <nav class="main_menu">
+  <ul class="main_title"></ul>
+  <ul class="main_menu_list">
+    <li>
+      <a class="main_menu_link">···</a>
+      <ul class="main_sub-menu_list">
+        <li>
+          <a class="main_sub-menu_link" (click)="addCard(0)"
+            >Добавить карточку</a
+          >
+        </li>
+        <li>
+          <a class="main_sub-menu_link" (click)="deleteBlock(0)"
+            >Очистить блок</a
+          >
+        </li>
+        <li>
+          <a class="main_sub-menu_link" (click)="returnLastCard(cards_of_key_partners)"
+            >Вернуть в исходный вид</a
+          >
+        </li>
+        <li>
+          <a class="main_sub-menu_link">Проследить изменения</a>
+          <ul class="main_sub-sub-menu_list">
+            <li>
+              <a class="main_sub-sub-menu_link_disabled"
+                >Выбрать начальный период для сравнения изменений</a
+              >
+            </li>
+            <li><input class placeholder="Введите дату" ></li>
+            <li>
+              <a class="main_sub-sub-menu_link_disabled"
+                >Выбрать конечный период для сравнения изменений</a
+              >
+            </li>
+            <li><input placeholder="Введите дату" /></li>
+            <li><a class="main_sub-sub-menu_link" (click)="compareBoard(boards.date,boards.date)" >Выполнить</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
 <table class="canva" width="100%">
 <tr>
   <td rowspan="2" class="container">
@@ -28,18 +74,18 @@
               <a class="sub-menu_link">Проследить изменения</a>
               <ul class="sub-sub-menu_list">
                 <li>
-                  <a class="sub-sub-menu_link"
+                  <a class="sub-sub-menu_link_disabled"
                     >Выбрать начальный период для сравнения изменений</a
                   >
                 </li>
-                <li><input class placeholder="Введите дату" /></li>
+                <li><input class placeholder="Введите дату" ></li>
                 <li>
-                  <a class="sub-sub-menu_link"
+                  <a class="sub-sub-menu_link_disabled"
                     >Выбрать конечный период для сравнения изменений</a
                   >
                 </li>
                 <li><input placeholder="Введите дату" /></li>
-                <li><a class="sub-sub-menu_link">Выполнить</a></li>
+                <li><a class="sub-sub-menu_link" (click)="compareBoard(boards.date,boards.date)" >Выполнить</a></li>
               </ul>
             </li>
           </ul>
