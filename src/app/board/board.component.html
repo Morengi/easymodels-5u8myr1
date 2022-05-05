@@ -1,6 +1,5 @@
 <div class="header1">
-  <h1>Название Доски</h1>
-  <nav class="main_menu">
+  <h1>Название <nav class="main_menu">
   <ul class="main_title"></ul>
   <ul class="main_menu_list">
     <li>
@@ -29,20 +28,21 @@
                 >Выбрать начальный период для сравнения изменений</a
               >
             </li>
-            <li><input class placeholder="Введите дату" ></li>
+            <li><input type="date" class placeholder="Введите дату" ></li>
             <li>
               <a class="main_sub-sub-menu_link_disabled"
                 >Выбрать конечный период для сравнения изменений</a
               >
             </li>
-            <li><input placeholder="Введите дату" /></li>
+            <li><input type="time" placeholder="Введите дату" /></li>
             <li><a class="main_sub-sub-menu_link" (click)="compareBoard(boards.date,boards.date)" >Выполнить</a></li>
           </ul>
         </li>
       </ul>
     </li>
   </ul>
-</nav>
+</nav>Доски </h1>
+  
 </div>
 <table class="canva" width="100%">
 <tr>
@@ -144,7 +144,7 @@
           <a class="menu_link"
           
           >···</a>
-          <ul class="sub-menu_list" [ngClass]="{'active_menu': !this.test}">
+          <ul class="sub-menu_list" >
             <li>
               <a class="sub-menu_link" (click)="addCard(1)"
                 >Добавить карточку</a

@@ -341,6 +341,9 @@ h1 {
 .active_menu{  
   display: none;
 }
+/* .menu_list > li:hover .sub-menu_list {
+  display: none;
+} */
 
 .main_menu_link{
   color: grey;
