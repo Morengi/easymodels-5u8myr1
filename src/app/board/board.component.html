@@ -1,23 +1,23 @@
 <div class="header1">
   <h1>Название
-     <!-- <nav class="main_menu">
+     <nav class="main_menu">
   <ul class="main_title"></ul>
   <ul class="main_menu_list">
     <li>
       <a class="main_menu_link">···</a>
       <ul class="main_sub-menu_list">
         <li>
-          <a class="main_sub-menu_link" 
+          <a class="main_sub-menu_link" (click)="createBoard()"
             >Создать новую доску</a
           >
         </li>
         <li>
-          <a class="main_sub-menu_link"
+          <a class="main_sub-menu_link" (click) ="saveBoard()"
             >Создать новое состояние доски</a
           >
         </li>
         <li>
-          <a class="main_sub-menu_link"
+          <a class="main_sub-menu_link" (click)="returnLastBoard()"
             >Вернуть в исходный вид</a
           >
         </li>
@@ -42,7 +42,7 @@
       </ul>
     </li>
   </ul>
-</nav> -->
+</nav>
 Доски </h1>
   
 </div>
@@ -201,6 +201,7 @@
           <article class="btn_ok" (click)="onCtrlEnter(i, 1)">
             Сохранить изменения
           </article>
+          <article class="text">  </article>
           <article class="btn_ok" (click)="deleteCard(i, 1)">Удалить</article>
         </div>
         <div class="text_block" *ngIf="el.show_text">

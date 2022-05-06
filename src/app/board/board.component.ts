@@ -28,6 +28,25 @@ export class BoardComponent implements OnInit {
     this.test = !this.test;
   }
 
+  createBoard(){
+
+    this.boards.push({
+      values:[
+        this.cards_of_key_actions = [],
+        this.cards_of_key_resources = [],
+        this.cards_of_value_proposition = [],
+        this.cards_of_customer_relationships=[],
+        this.cards_of_channels=[],
+        this.cards_of_customer_segments=[],
+        this.cards_of_cost_structure=[],
+        this.cards_of_income_streams=[],
+      ],
+      date: Date.now(),
+    });
+    // console.log();
+  }
+  
+
   saveBoard() {
     this.boards.push({
       values: [
